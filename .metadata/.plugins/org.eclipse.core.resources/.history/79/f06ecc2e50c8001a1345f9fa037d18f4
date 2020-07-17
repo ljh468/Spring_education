@@ -1,0 +1,18 @@
+package poly.controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+
+import com.sun.istack.internal.logging.Logger;
+
+import poly.service.IBoardService;
+
+@Controller
+public class BoardController {
+	private Logger log = Logger.getLogger(getClass());
+	
+	@Resource(name="BoardService")
+	IBoardService boardService;
+	
+}

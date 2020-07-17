@@ -1,0 +1,12 @@
+package poly.dto;
+
+public class BoardDTO {
+	private String post_no;
+	private String reg_id;
+	private String post_title;
+	private String post_content;
+	private String reg_dt;
+	private String upd_id;
+	private String upd_dt;
+	
+}

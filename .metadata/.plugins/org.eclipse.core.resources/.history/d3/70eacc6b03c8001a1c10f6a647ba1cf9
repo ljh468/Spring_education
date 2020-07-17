@@ -1,0 +1,29 @@
+package poly.controller;
+
+import javax.annotation.Resource;
+
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+@Controller
+public class EmpController {
+	
+	// 콘솔에 로그를 기록하기 위한 객체
+	private Logger log = Logger.getLogger(this.getClass());
+	
+	//Controller와 Service를 연결
+	@Resource(name="EmpService")
+	IEmpService empService;
+	
+	@RequestMapping(value="/scott/empList")
+	public String empList() {
+		
+		
+		return "/scott/empList";
+	}
+	
+	
+			
+}

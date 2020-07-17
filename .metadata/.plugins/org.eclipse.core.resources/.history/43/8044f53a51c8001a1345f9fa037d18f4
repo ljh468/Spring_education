@@ -1,0 +1,30 @@
+package poly.controller;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.sun.istack.internal.logging.Logger;
+
+import poly.dto.BoardDTO;
+import poly.service.IBoardService;
+
+@Controller
+public class BoardController {
+	private Logger log = Logger.getLogger(getClass());
+	
+	@Resource(name="BoardService")
+	IBoardService boardService;
+	
+	@RequestMapping(value="/board/boardList")
+	public String boardList(ModelMap model) {
+		
+		List<BoardDTO> rList = boardService.getboardList();
+		
+		return "/board/boardList";
+	}
+}

@@ -1,0 +1,20 @@
+package poly.service.impl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import poly.dto.EmpDTO;
+import poly.service.IEmpService;
+
+//자신이 EmpService라는 서비스 객체임을 스프링 프레임워크에 알림
+@Service("EmpService")
+public class EmpService implements IEmpService{
+
+	@Override
+	public List<EmpDTO> getEmpList() {
+		// TODO Auto-generated method stub
+		return null;
+	}  // IEmpService 인터페이스를 구현함
+	
+}

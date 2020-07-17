@@ -1,0 +1,45 @@
+<%@page import="poly.dto.BoardDTO"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<%
+	List<BoardDTO> rList = (List<BoardDTO>) request.getAttribute("rList");
+	System.out.println(rList.size());
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	Board
+	<table border='1'>
+		<tr>
+		<td>글번호</td>
+		<td>작성자아이디</td>
+		<td>글제목</td>
+		<td>글내용</td>
+		<td>게시일</td>
+		<td>수정일</td>
+		<td>수정자</td>
+		</tr>
+		
+		<% for(BoardDTO B : rList) { %>
+		<tr>
+		<td><%=B.getPost_no() %></td>
+		<td><%=B.getReg_id() %></td>
+		<td><%=B.getPost_title() %></td>
+		<td><%=B.getPost_content() %></td>
+		<td><%=B.getReg_dt() %></td>
+		<td><%=B.getUpd_dt() %></td>
+		<td><%=B.getUpd_id() %></td>
+		</tr>
+		<% } %>
+	</table>
+	<div style="width:100px;text-align:right;margin-top:5px;">
+	<button type=button oclick="location.href='/board/newPost.do'">새글</div>
+	</div>
+</body>
+</html>
