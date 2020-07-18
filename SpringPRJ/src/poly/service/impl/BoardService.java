@@ -26,5 +26,10 @@ public class BoardService implements IBoardService{
 	public int insertPost(BoardDTO pDTO) {
 		return boardMapper.insertPost(pDTO);
 	}
-	
+
+	@Override
+	public BoardDTO getBoardDetail(BoardDTO pDTO) {
+		return boardMapper.getBoardDetail(pDTO);
+	}
+		
 }

@@ -28,7 +28,7 @@
 		<% for(BoardDTO B : rList) { %>
 		<tr>
 		<td><%=nvl(B.getPost_no()) %></td>
-		<td><%=nvl(B.getPost_title()) %></td>
+		<td><a href="/board/boardDetail.do?no=<%=B.getPost_no()%>"><%=nvl(B.getPost_title()) %></a></td>
 		<td><%=nvl(B.getReg_dt()) %></td>
 		<td><%=nvl(B.getReg_id()) %></td>
 		</tr>
@@ -36,7 +36,6 @@
 	</table>
 	<div style="width:100%; text-align:right; margin-top:5px;">
 	<button type="button"  onclick="location.href='/board/newPost.do'">새글</button></div>
-	</div>
 	</div>
 </body>
 </html>
