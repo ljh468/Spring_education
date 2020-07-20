@@ -4,7 +4,7 @@
     pageEncoding="UTF-8"%>
 <%
 
-	BoardDTO rDTO = (BoardDTO)request.getAttribute("rDTO");
+	BoardDTO rDTO = (BoardDTO) request.getAttribute("rDTO");
 
 %>
 
@@ -27,6 +27,19 @@
 	<hr>
 	<div style="float:left;">
 	<button onclick="location.href='/board/boardList.do'">뒤로</button>
+	</div>
+	<div style="float: right">
+		<button onclick ="confirmDelete();">삭제</botton>
+	</div>
+	<script type="text/javascript">
+	function confirmDelete(){
+		if(confirm("삭제하시겠습니까?")){
+			location.href = "/board/deletePost.do?no=<%=rDTO.getPost_no()%>";
+		}
+	}
+	</script>
+	<div>
+	<button onclick = "location.href='/board/editPost.do?no=<%=rDTO.getPost_no()%>'">편집</button>
 	</div>
 </div>
 </body>
