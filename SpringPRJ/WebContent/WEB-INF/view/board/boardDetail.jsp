@@ -29,7 +29,7 @@
 	<button onclick="location.href='/board/boardList.do'">뒤로</button>
 	</div>
 	<div style="float: right">
-		<button onclick ="confirmDelete();">삭제</botton>
+		<button onclick ="confirmDelete();"> 삭제 </botton>
 	</div>
 	<script type="text/javascript">
 	function confirmDelete(){

@@ -8,5 +8,6 @@
 		<!-- sql을 불러왔을경우 데이터를 DTO에 넣어 사용하기 위함-->
 		<typeAlias type="poly.dto.EmpDTO" alias="EmpDTO"/>
 		<typeAlias type="poly.dto.BoardDTO" alias="BoardDTO"/>
+		<typeAlias type="poly.dto.UserDTO" alias="UserDTO"/>
     </typeAliases>
 </configuration>

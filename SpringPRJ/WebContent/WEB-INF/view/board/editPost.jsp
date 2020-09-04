@@ -11,10 +11,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>새 글 등 록</title>
+<title>수 정 등 록</title>
 </head>
 <body>
-<h3>새 글 등록</h3>
+<h3>수 정 등록</h3>
 <form action="/board/doEditPost.do" method="post">
 <div>제목</div>
 <div><input type="text" name="post_title" style="width:500px; " value="<%=rDTO.getPost_title() %>" required></div>

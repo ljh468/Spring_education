@@ -23,7 +23,8 @@
 	)
 	</insert>
 	<select id="getBoardDetail" parameterType="BoardDTO" resultType="BoardDTO">
-	SELECT * FROM BOARD WHERE POST_NO = #{post_no}
+	SELECT * 
+	FROM BOARD WHERE POST_NO = #{post_no}
 	</select>
 	
 	<update id="updatePost" parameterType="BoardDTO">

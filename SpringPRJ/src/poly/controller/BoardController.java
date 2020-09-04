@@ -25,7 +25,7 @@ public class BoardController {
 	// Controller와 Service를 연결
 	@Resource(name = "BoardService")
 	IBoardService boardService; // 가져올때 사용할 인터페이스타입의 변수 boardService설정
-
+	
 	@RequestMapping(value = "/board/boardList")
 	public String boardList(ModelMap model) {
 
@@ -64,7 +64,7 @@ public class BoardController {
 		// pDTO안에 있는 내용을 가지고 게시글을 등록 해달라고 BoardService에 요청
 		// 등록에 성공하면 res에 반환값1을 받음
 		int res = boardService.insertPost(pDTO);
-
+		log.info("res : " + res);
 		String msg = "";
 		String url = "/board/boardList.do";
 
@@ -132,7 +132,10 @@ public class BoardController {
 		pDTO.setPost_title(post_title);
 		pDTO.setPost_content(post_content);
 		pDTO.setPost_no(post_no);
-
+		log.info("post_title : "+ post_title);
+		log.info("post_content : "+ post_content);
+		log.info("post_no : "+ post_no);
+		
 		int res = boardService.updatePost(pDTO);
 
 		String msg = "";
@@ -150,7 +153,7 @@ public class BoardController {
 		return "/redirect";
 	}
 
-	@RequestMapping("board/deletePost")
+	@RequestMapping(value="board/deletePost")
 	public String deletePost(HttpServletRequest request, ModelMap model) {
 		String post_no = request.getParameter("no");
 
@@ -160,7 +163,7 @@ public class BoardController {
 		int res = boardService.deletePost(pDTO);
 
 		String msg = "";
-		String url = "/board/boardList";
+		String url = "/board/boardList.do";
 
 		// 게시글 등록 성공할 경우 res에 0보다 큰수가 저장됨
 		if (res > 0) {

@@ -12,7 +12,11 @@
 </style>
 </head>
 <body>
-와! 스프링 아시는구나!
-참고로 겁.나.어.렵.습.니.다
+<!-- Top Start -->
+<div>
+	<%@include file="/WEB-INF/view/user/top.jsp" %>
+</div>
+'<!-- Top End -->
+Hello World
 </body>
 </html>
