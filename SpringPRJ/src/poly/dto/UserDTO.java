@@ -10,6 +10,7 @@ public class UserDTO {
 	private String user_id; // 아이디
 	private String user_pwd; // 비밀번호
 	private String user_name; // 유저이름
+	
 	public String getUser_id() {
 		return user_id;
 	}

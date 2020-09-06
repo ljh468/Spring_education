@@ -44,6 +44,7 @@ public class EmpController {
 		log.info("empList end!!");
 		return "/scott/empList";
 	}
+	
 	@RequestMapping(value="/scott/managerList")
 	public String managerList(ModelMap model) {
 		List<EmpDTO> rList = empService.getmanagerList();

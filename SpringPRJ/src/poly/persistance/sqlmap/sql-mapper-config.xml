@@ -9,5 +9,6 @@
 		<typeAlias type="poly.dto.EmpDTO" alias="EmpDTO"/>
 		<typeAlias type="poly.dto.BoardDTO" alias="BoardDTO"/>
 		<typeAlias type="poly.dto.UserDTO" alias="UserDTO"/>
+		<typeAlias type="poly.dto.NoticeDTO" alias="NoticeDTO"/>
     </typeAliases>
 </configuration>

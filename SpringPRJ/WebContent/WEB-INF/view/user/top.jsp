@@ -1,6 +1,5 @@
 <%@page import="static poly.util.CmmUtil.nvl"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 
 	String user_name = nvl((String)session.getAttribute("user_name"));

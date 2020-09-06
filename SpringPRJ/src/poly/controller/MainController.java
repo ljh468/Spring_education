@@ -1,5 +1,7 @@
 package poly.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,11 +14,11 @@ public class MainController {
 	private Logger log = Logger.getLogger(this.getClass());
 	
 	@RequestMapping(value="index") // index.do라는 요청이 들어왔을때 밑의 메서드가 실행되게 하는 어노테이션
-	public String Index() {
+	public String Index(HttpSession session) {
 		
 		// 해당 메서드가 호출될때 해당메서트의 클래스이름을 로그형태로 출력
 		log.info(this.getClass());
-		
+		session.invalidate();
 		return "/index";
 	}
 	
