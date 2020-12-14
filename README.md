@@ -1,2 +1,2 @@
 # Spring_education
-스프링 교육
+자바 스프링 연습
